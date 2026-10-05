@@ -24,3 +24,64 @@ Associative Entity for Student-Course: Enrollment
 One-to-One Relationship: NOT REQUIRED
 
 Visual Diagram Created in MySQL Workbench: YES
+
+
+
+
+                    +----------------+
+                    |  Department    |
+                    +----------------+
+                    | Dept_ID (PK)   |
+                    | Dept_Name      |
+                    | Location       |
+                    +----------------+
+                            |
+                            | 1
+                            |
+                            | M
+                    +----------------+
+                    |   Student      |
+                    +----------------+
+                    | Student_ID(PK) |
+                    | Student_Name   |
+                    | DOB            |
+                    | Phone          |
+                    +----------------+
+                       |          |
+                    1  |          | M
+                       |          |
+                       |          |
+                    +------------------+
+                    | Student_ID_Card  |
+                    +------------------+
+                    | Card_No (PK)     |
+                    +------------------+
+
+                       M
+                       |
+                       |
+                 +-----------+
+                 | Enrollment|
+                 +-----------+
+                       |
+                       |
+                       M
+                +---------------+
+                |   Course      |
+                +---------------+
+                | Course_ID(PK) |
+                | Course_Name   |
+                | Credits       |
+                +---------------+
+                       ^
+                       |
+                     M |
+                       |
+                     1 |
+                +---------------+
+                |   Faculty     |
+                +---------------+
+                | Faculty_ID(PK)|
+                | Faculty_Name  |
+                | Qualification |
+                +---------------+
